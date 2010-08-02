@@ -75,7 +75,7 @@ def load_filter(name):
     #Reset the original sys.dont_write_bytecode setting where we're done
     try:
         initial_dont_write_bytecode = sys.dont_write_bytecode
-    except KeyError:
+    except AttributeError:
         initial_dont_write_bytecode = False
     #Return the cached filter, or load it from scratch it not cached.
     try:
